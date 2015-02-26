@@ -1,16 +1,22 @@
 @echo off
 
-pushd c:\projects
-if exist Cocos2dGame (
+set PROJECT_DIR=c:\projects\Cocos2dGame
+set SRC=%CD%\Cocos2dGame
+
+echo %SRC%
+echo %PROJECT_DIR%
+
+if exist %PROJECT_DIR% (
     echo Removing previous Cocos2dGame files...
-    rmdir Cocos2dGame /s /q
+    rmdir %PROJECT_DIR% /s /q
 )
 
-mkdir Cocos2dGame
-pushd Cocos2dGame
-echo Copying Cocos2dGame files to c:\projects\Cocos2dGame...
-xcopy "C:\labs\cocos2d-x-lab\Cocos2dGame" /i /y /c /q /e /k
+mkdir %PROJECT_DIR%
+pushd %PROJECT_DIR%
+echo Copying Cocos2dGame files to %PROJECT_DIR%...
+xcopy %SRC% /i /y /c /q /e /k
 echo Done!
-explorer "c:\projects\Cocos2dGame\proj.win8.1-universal"
+explorer %PROJECT_DIR%\proj.win8.1-universal"
 popd
-popd
+
+
