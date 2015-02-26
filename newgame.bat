@@ -1,10 +1,7 @@
 @echo off
 
 set PROJECT_DIR=c:\projects\Cocos2dGame
-set SRC=%CD%\Cocos2dGame
-
-echo %SRC%
-echo %PROJECT_DIR%
+set SRC=c:\labs\cocos2d-x-3.4-quickstart\Cocos2dGame
 
 if exist %PROJECT_DIR% (
     echo Removing previous Cocos2dGame files...
