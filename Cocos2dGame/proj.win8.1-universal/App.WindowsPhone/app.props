@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="APP_DLLS">
+    <CocosBinPath Condition=" '$(CocosBinPath)' == '' ">$(EngineRoot)prebuilt\$(COCOS2D_PLATFORM)-specific\prebuilt\$(Platform)\$(Configuration)\</CocosBinPath>
+  </PropertyGroup>
+  <ItemGroup Label="COCOS">
+    <None Include="$(CocosBinPath)libcocos2d_v3.4_WindowsPhone_8.1.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+</Project>
